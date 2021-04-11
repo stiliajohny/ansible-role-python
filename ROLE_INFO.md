@@ -23,7 +23,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: ansible-role-python, var_name: 42 }
+         - { role: ansible-role-python }
 
 License
 -------
