@@ -10,7 +10,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/stiliajohny/ansible-role-python">
-    <img src=".assets/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://raw.githubusercontent.com/stiliajohny/ansible-role-python/main/.assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">ansible-role-python</h3>
