@@ -16,7 +16,7 @@
   <h3 align="center">ansible-role-python</h3>
 
   <p align="center">
-    Install Python(3) and pip(3) packages with an ease
+    Install Python(3) and pip(3) packages with ease
     <br />
     <a href="./README.md"><strong>Explore the docs »</strong></a>
     <br />
