@@ -1,0 +1,24 @@
+- name: Ensure Python{{ python_version }} is installed.
+  community.general.pacman:
+    name: "python{{ python_version }}"
+    state: present
+  become: true
+
+- name: Ensure Pip is installed
+  community.general.pacman:
+    name: "{{ pip_package }}"
+    state: present
+  become: true
+
+- name: Ensure pip_install_packages are installed.
+  pip:
+    name: "{{ loop_main_python.name | default(loop_main_python) }}"
+    version: "{{ loop_main_python.version | default(omit) }}"
+    virtualenv: "{{ loop_main_python.virtualenv | default(omit) }}"
+    state: "{{ item.state | default(omit) }}"
+    executable: "{{ pip_executable }}"
+  ignore_errors: true
+  with_items: "{{ pip_install_packages }}"
+  loop_control:
+    loop_var: loop_main_python
+  become: true
